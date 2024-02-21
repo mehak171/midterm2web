@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/input', pathMatch: 'full' }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
