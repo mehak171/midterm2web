@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { DataService } from '../data.service';
-import { EmployeeData } from '../data.service';
+import { DataService, EmployeeData } from '../data.service';
 
 @Component({
   selector: 'app-output',
@@ -9,7 +8,7 @@ import { EmployeeData } from '../data.service';
   styleUrls: ['./output.component.css']
 })
 export class OutputComponent implements OnInit, OnDestroy {
-  employeeData?: EmployeeData | null;
+  employeeData: EmployeeData | null = null;
   private dataSubscription?: Subscription;
 
   constructor(private dataService: DataService) {}

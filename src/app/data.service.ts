@@ -11,7 +11,7 @@ export interface EmployeeData {
   providedIn: 'root',
 })
 export class DataService {
-  private employeeData = new BehaviorSubject<EmployeeData | null>(null);
+  public employeeData = new BehaviorSubject<EmployeeData | null>(null);
   currentEmployeeData = this.employeeData.asObservable();
 
   constructor() {}
